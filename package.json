@@ -1,0 +1,54 @@
+{
+  "name": "horizon",
+  "version": "1.0.0",
+  "description": "Interactive learning platform",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SigmaITC/horizon.git"
+  },
+  "keywords": [
+    "learning",
+    "javascript",
+    "nodejs"
+  ],
+  "author": "SigmaITC <chris.sundberg@sigma.se> (https://github.com/SigmaITC)",
+  "contributors": [
+    "Chris Sundberg <chris.sundberg@sigma.se>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SigmaITC/horizon/issues"
+  },
+  "homepage": "https://github.com/SigmaITC/horizon#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "lint:js": "eslint . --ext .js --ext .json --ignore-path .eslintignore",
+    "prepush": "test",
+    "postmerge": "yarn",
+    "test": "mocha src/index.js",
+    "upgrade": "updtr --save-exact"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "6.23.1",
+    "babel-loader": "6.4.1",
+    "babel-preset-es2015": "6.22.0",
+    "chai": "3.5.0",
+    "commitizen": "2.9.6",
+    "cross-env": "3.2.4",
+    "cz-conventional-changelog": "2.0.0",
+    "eslint": "3.18.0",
+    "eslint-plugin-json": "1.2.0",
+    "husky": "0.13.3",
+    "mocha": "3.2.0",
+    "npm-run-all": "4.0.2",
+    "updtr": "0.2.3",
+    "webpack": "2.3.2"
+  }
+}
