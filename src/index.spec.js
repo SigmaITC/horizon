@@ -1,12 +1,10 @@
-const expect = require('chai').expect;
-const add = require('./index');
-
-console.info(add)
+import {expect} from 'chai';
+import add from './index';
 
 describe('add', () => {
 
-  it('should return the sum', () => {
-    expect(add(1, 3)).to.equal(4);
-  });
+    it('should return the sum', () => {
+        expect(add(1, 3)).to.equal(4);
+    });
 
 });

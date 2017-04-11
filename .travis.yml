@@ -1,0 +1,23 @@
+sudo: false
+language: node_js
+cache:
+    directories:
+        - node_modules
+branches:
+    only:
+        - master
+        - develop
+notifications:
+    email: false
+node_js:
+    - 6.10.2
+before_install:
+    -npm i -g npm@3.10.0 yarn
+before_script:
+    - npm prune
+script:
+    - npm run cover
+    - npm run check-coverage
+    - npm run build
+after_success:
+    - npm run report-coverage

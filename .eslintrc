@@ -1,6 +1,11 @@
 {
     "plugins": [
-        "json"
+        "chai-expect",
+        "eslint-comments",
+        "filenames",
+        "json",
+        "mocha",
+        "promise"
     ],
 
     "env": {
@@ -27,7 +32,6 @@
             "requireReturn": false
         }],
 
-        // ECMAScript 6
         "arrow-body-style": "error",
         "arrow-parens": "error",
         "arrow-spacing": "error",
@@ -51,6 +55,31 @@
         "prefer-template": "error",
         "require-yield": "error",
         "template-curly-spacing": "error",
-        "yield-star-spacing": "error"
+        "yield-star-spacing": "error",
+
+        "chai-expect/missing-assertion": "error",
+        "chai-expect/no-inner-compare": "error",
+        "chai-expect/terminating-properties": "error",
+
+        "eslint-comments/disable-enable-pair": "error",
+        "eslint-comments/no-duplicate-disable": "error",
+        "eslint-comments/no-unlimited-disable": "error",
+        "eslint-comments/no-unused-disable": "error",
+        "eslint-comments/no-unused-enable": "error",
+        "eslint-comments/no-use": "error",
+
+        "filenames/match-regex": ["error", "^([a-z][a-z0-9]*)(-[a-z0-9]+)*(\\.[a-z]+)?$", true],
+        "filenames/match-exported": "off",
+        "filenames/no-index": "off",
+
+        "promise/always-return": "error",
+        "promise/no-return-wrap": "error",
+        "promise/param-names": "error",
+        "promise/catch-or-return": "error",
+        "promise/no-native": "off",
+        "promise/no-nesting": "warn",
+        "promise/no-promise-in-callback": "warn",
+        "promise/no-callback-in-promise": "warn",
+        "promise/avoid-new": "warn"
     }
 }

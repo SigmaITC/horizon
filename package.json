@@ -12,6 +12,10 @@
     "javascript",
     "nodejs"
   ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "author": "SigmaITC <chris.sundberg@sigma.se> (https://github.com/SigmaITC)",
   "contributors": [
     "Chris Sundberg <chris.sundberg@sigma.se>"
@@ -21,34 +25,91 @@
     "url": "https://github.com/SigmaITC/horizon/issues"
   },
   "homepage": "https://github.com/SigmaITC/horizon#readme",
+  "engines": {
+    "node": ">=6.10.0",
+    "npm": ">=3.10.0"
+  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "build",
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "ci",
+        "test",
+        "chore",
+        "revert"
+      ],
+      "scope": {
+        "required": false,
+        "allowed": [
+          "button",
+          "card"
+        ],
+        "validate": false,
+        "multiple": false
+      },
+      "warnOnFail": false,
+      "maxSubjectLength": 100,
+      "subjectPattern": ".+",
+      "subjectPatternErrorMsg": "subject does not match subject pattern!",
+      "helpMessage": "",
+      "autoFix": false
     }
   },
   "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "cross-env NODE_ENV=development babel --out-dir dist --ignore *.spec.js src",
+    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "commit": "git-cz",
-    "lint:js": "eslint . --ext .js --ext .json --ignore-path .eslintignore",
-    "prepush": "test",
+    "commitmsg": "validate-commit-msg",
+    "cover": "nyc run-s test:unit",
+    "lint:js": "eslint . --ext .js --ext .json --ignore-path .gitignore",
+    "precommit": "run-s cover check-coverage",
+    "postcheckout": "yarn",
+    "postcommit": "git status",
     "postmerge": "yarn",
-    "test": "mocha src/index.js",
-    "upgrade": "updtr --save-exact"
+    "postpush": "git status",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "test": "cross-env NODE_ENV=test check-engines && run-s lint:* test:unit",
+    "test:unit": "mocha -G -d -s 60 -R spec src/index.spec.js --compilers js:babel-register",
+    "upgrade": "updtr --save-exact",
+    "watch:unit": "npm run test:unit -- -w"
   },
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "6.24.1",
     "babel-core": "6.23.1",
     "babel-loader": "6.4.1",
-    "babel-preset-es2015": "6.22.0",
+    "babel-preset-env": "1.3.3",
+    "babel-register": "6.24.1",
     "chai": "3.5.0",
+    "check-engines": "1.5.0",
+    "codecov.io": "0.1.6",
     "commitizen": "2.9.6",
     "cross-env": "3.2.4",
     "cz-conventional-changelog": "2.0.0",
     "eslint": "3.18.0",
+    "eslint-plugin-chai-expect": "1.1.1",
+    "eslint-plugin-eslint-comments": "1.0.0",
+    "eslint-plugin-filenames": "1.1.0",
     "eslint-plugin-json": "1.2.0",
+    "eslint-plugin-mocha": "4.9.0",
+    "eslint-plugin-promise": "3.5.0",
     "husky": "0.13.3",
     "mocha": "3.2.0",
     "npm-run-all": "4.0.2",
+    "nyc": "10.2.0",
+    "rimraf": "2.6.1",
     "updtr": "0.2.3",
+    "validate-commit-msg": "2.12.1",
     "webpack": "2.3.2"
   }
 }
