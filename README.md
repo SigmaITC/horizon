@@ -1,5 +1,10 @@
 # Horizon (Working name)
+[![Travis](https://travis-ci.org/SigmaITC/horizon.svg?branch=master)](https://travis-ci.org/SigmaITC/horizon)
+[![Code Climate](https://codeclimate.com/github/SigmaITC/horizon/badges/gpa.svg)](https://codeclimate.com/github/SigmaITC/horizon)
+[![Code Climate](https://codeclimate.com/github/SigmaITC/horizon/badges/coverage.svg)](https://codeclimate.com/github/SigmaITC/horizon/coverage)
+[![Code Climate](https://codeclimate.com/github/SigmaITC/horizon/badges/issue_count.svg)](https://codeclimate.com/github/SigmaITC/horizon)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/SigmaITC/horizon/blob/master/LICENSE)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/horizon-app)
 
 Interactive learning platform
 
