@@ -5,7 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/SigmaITC/horizon/badges/issue_count.svg)](https://codeclimate.com/github/SigmaITC/horizon)
 [![David](https://david-dm.org/SigmaITC/horizon.svg)](https://david-dm.org/SigmaITC/horizon)
 [![David](https://david-dm.org/SigmaITC/horizon/dev-status.svg)](https://david-dm.org/SigmaITC/horizon)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/SigmaITC/horizon/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/SigmaITC/horizon.svg)](https://github.com/SigmaITC/horizon/blob/master/LICENSE)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/horizon-app)
 
 Interactive learning platform
