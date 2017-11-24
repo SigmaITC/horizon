@@ -22,10 +22,10 @@ We you are done installing nvm make sure to install the correct NodeJS version. 
 Also run `nvm alias default x.x.x` to make sure that nvm uses a specific NodeJS version by default. Otherwise you will have to run `nvm use x.x.x` every time you open a terminal.
 
 ### Install global dependencies
-`npm i -g commitizen yarn`
+`npm i -g commitizen`
 
 ### Install local dependencies
-Run `yarn` from your repository's root.
+Run `npm i` from your repository's root.
 
 ## Contributing
 

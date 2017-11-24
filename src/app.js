@@ -1,7 +1,7 @@
-// import rx from 'rxjs';
 import xs from 'xstream';
 import {run} from '@cycle/run';
 import {makeDOMDriver, h1} from '@cycle/dom';
+import {makeHTTPDriver} from'@cycle/http';
 
 function main() {
     const sinks = {
@@ -13,7 +13,8 @@ function main() {
 }
 
 const drivers = {
-    DOM: makeDOMDriver('#app')
+    DOM: makeDOMDriver('#app'),
+    HTTP: makeHTTPDriver()
 };
 
 run(main, drivers);

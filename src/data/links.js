@@ -1,0 +1,15 @@
+export default [
+    { target: 'functional', source: 'haskell', strength: 0.7 },
+    { target: 'functional', source: 'erlang', strength: 0.7 },
+    { target: 'functional', source: 'vavr', strength: 0.5 },
+    { target: 'functional', source: 'java', strength: 0.2 },
+    { target: 'objectoriented', source: 'java', strength: 0.7 },
+    { target: 'imperative', source: 'golang', strength: 0.7 },
+    { target: 'imperative', source: 'c++', strength: 0.7 },
+    { target: 'imperative', source: 'java', strength: 0.7 },
+    { target: 'reactive', source: 'java', strength: 0.5 },
+    { target: 'reactive', source: 'rxjava', strength: 0.7 },
+    { target: 'java', source: 'rxjava', strength: 0.7 },
+    { target: 'haskell', source: 'erlang', strength: 0.1 },
+    { target: 'vavr', source: 'java', strength: 0.7 },
+]
