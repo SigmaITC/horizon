@@ -1,1 +1,4 @@
-export default (x, y) => x + y
+import 'babel-polyfill';
+import './app';
+
+import './app.css';

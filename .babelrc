@@ -1,5 +1,38 @@
 {
-  "presets": [
-    "env"
-  ]
+    "env": {
+        "production": {
+            "presets": [
+                ["env",
+                    {
+                        "modules": false,
+                        "useBuiltIns": true,
+                        "debug": true
+                    }
+                ],
+                "minify"
+            ]
+        },
+        "test":{
+            "presets": [
+                ["env",
+                    {
+                        "modules": false,
+                        "useBuiltIns": true,
+                        "debug": true
+                    }
+                ]
+            ]
+        },
+        "development": {
+            "presets": [
+                ["env",
+                    {
+                        "modules": false,
+                        "useBuiltIns": true,
+                        "debug": true
+                    }
+                ]
+            ]
+        }
+    }
 }

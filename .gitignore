@@ -93,4 +93,7 @@ npm-debug.log
 .nyc_output
 coverage
 dist
+public/*
+!public/images
+report
 .eslintcache
