@@ -82,7 +82,7 @@
     "start:dev": "nodemon src/server.js",
     "stats": "cross-env NODE_ENV=production webpack -p --json > report/bundle-stats.json",
     "test": "cross-env NODE_ENV=test check-engines && run-s lint:* test:unit",
-    "test:unit": "mocha -G -d -s 60 -R spec src/index.spec.js --compilers js:babel-register",
+    "test:unit": "mocha -G -s 60 -R spec src/**/*.spec.js --compilers js:babel-register",
     "upgrade": "updtr --save-exact",
     "watch:unit": "npm run test:unit -- -w"
   },
